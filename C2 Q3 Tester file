@@ -1,0 +1,61 @@
+package bird;
+
+import java.util.Scanner;
+
+public class C2_A2_Q3_EoinOHagan {
+
+    static Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        BirdSightMachine bird1 = createBird();
+        bird1.displayDetails();
+
+        in.close();
+    }
+
+    private static BirdSightMachine createBird() {
+
+
+    System.out.print("Please enter the amount of times BirdA was sighted: " );
+    int numOfASightings = in.nextInt();
+    in.nextLine();
+
+    System.out.print("Please enter the amount of times BirdB was sighted: " + );
+    int numOfBSightings = in.nextInt();
+    in.nextLine();
+
+
+    BirdSightMachine newBird = new BirdSightMachine(numOfASightings, numOfBSightings);
+
+
+    // if statement if bird B has more sightings then bird A
+    if (numOfASightings < numOfBSightings) {
+        System.out.println("Results of season:");
+        System.out.println("Bird A: " + numOfASightings + " sightings");
+        System.out.println("Bird B: " + numOfBSightings + " sightings");
+        System.out.println("Bird B wins");
+
+        // if statement if bird A has more sightings then bird B
+    } else if (numOfBSightings < numOfASightings) {
+        System.out.println("Results of season:");
+        System.out.println("Bird A: " + numOfASightings + " sightings");
+        System.out.println("Bird B: " + numOfBSightings + " sightings");
+        System.out.println("Bird A wins");
+
+        //if statement if both sightings are the same
+    } else if (numOfASightings == numOfBSightings) {
+        System.out.println("Results of season:");
+        System.out.println("Bird A: " + numOfASightings + " sightings");
+        System.out.println("Bird B: " + numOfBSightings + " sightings");
+        System.out.println("Its a draw");
+
+    }
+
+    return createBird();
+
+}
+
+
+
+}
