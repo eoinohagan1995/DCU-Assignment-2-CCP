@@ -1,0 +1,56 @@
+package bird;
+
+
+
+public class BirdSightMachine {
+
+
+
+    private  int numOfASightings = 0;
+    private int numOfBSightings = 0;
+
+
+    public BirdSightMachine(int numOfASightings, int numOfBSightings) {
+        this.numOfASightings = numOfASightings;
+        this.numOfBSightings= numOfBSightings;
+        this.displayDetails();
+        numOfASightings++;
+        numOfBSightings++;
+    }
+
+    public Integer getBirdA() {
+this.numOfASightings = numOfASightings;
+        return numOfASightings;
+    }
+
+    public Integer getBirdB() {
+this.numOfBSightings = numOfBSightings;
+        return numOfBSightings;
+    }
+
+    public Integer reset(){
+        numOfASightings = 0;
+        numOfBSightings = 0;
+        return null;
+    }
+
+
+
+    public void displayDetails() {
+        System.out.println("Result of season");
+        System.out.println("BirdA : " + this.numOfASightings + "sightings");
+        System.out.println("BirdB: " + this.numOfBSightings + "sightings");
+
+    }
+
+    public void displayWinnerA(){
+        System.out.println("BirdA was sighted: ");
+    }
+
+    public void displayWinnerB(){
+        System.out.println("BirdB was sighted: " );
+    }
+
+
+
+}
