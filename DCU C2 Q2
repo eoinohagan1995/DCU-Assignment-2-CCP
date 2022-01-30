@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.*;
+
+public class C2_A2_EoinOHagan {
+    public static void main(String[] args) {
+
+        //declaring array for used letters
+        ArrayList<Character> usedList = new ArrayList<Character>();
+
+        //declaring array for letters
+        ArrayList<Character> charList = new ArrayList<Character>();
+        charList.add('a');
+        charList.add('b');
+        charList.add('c');
+        charList.add('d');
+        charList.add('e');
+        charList.add('f');
+        charList.add('g');
+        charList.add('h');
+        charList.add('i');
+        charList.add('j');
+        charList.add('k');
+        charList.add('l');
+        charList.add('m');
+        charList.add('n');
+        charList.add('o');
+        charList.add('p');
+        charList.add('q');
+        charList.add('r');
+        charList.add('s');
+        charList.add('t');
+        charList.add('u');
+        charList.add('v');
+        charList.add('w');
+        charList.add('x');
+        charList.add('y');
+        charList.add('z');
+
+        //Random used to generate random indexes
+        Random random = new Random();
+
+        //loop to print 4x4 grid
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 4; j++) {
+
+
+
+                //generating a random index for our char array
+                int randomLetterIndex = random.nextInt(charList.size() - 1);
+
+                //Adding the used characters to the used list
+                usedList.add(charList.get(randomLetterIndex));
+
+                System.out.print(charList.get(randomLetterIndex) + "|");
+            }
+            System.out.println();
+        }
+
+
+
+        Set<Character> distinct = new HashSet<Character>(charList);
+        for (Character s : distinct) {
+            System.out.println(s + ": " + Collections.frequency(usedList, s));
+
+
+}
+
+            }
+
+        }
